@@ -5,6 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "lint":"echo 'lint code ...'",
+    "format":"echo 'format code ...'",
     "build:prod": "vue-tsc --noEmit && vite build --mode production",
     "preview":"vite preview",
     "test:unit": "vitest --dir src/__test__ --run",
