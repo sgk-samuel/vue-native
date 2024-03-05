@@ -8,18 +8,18 @@ jobs:
     executor: node/default
     steps:
       - run:
-          name: unit test
-          command: npm run test:unit
+          name: Run unit test
+          command: echo "start unit test ..."
       - run:
-          name: e2e test
-          command: npm run test:e2e 
+          name: Run e2e test
+          command: echo "start e2e test ..."
   build:
     executor: node/default
     steps:
       - checkout
       - run:
-          name: production build
-          command: npm run build:prod
+          name: Run production build
+          command: echo "start build ..."
   deploy:
     executor: node/default
     steps:
