@@ -24,7 +24,7 @@ jobs:
     executor: node/default
     steps:
       - run:
-          name: deploy
+          name: Run deploy
           command: echo "start deploy ..."
 workflows:
   example:
