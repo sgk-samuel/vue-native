@@ -1,6 +1,7 @@
 version: 2.1
 jobs:
   test:
+    executor: node/default
     steps:
       - run:
           name: unit test
@@ -9,12 +10,14 @@ jobs:
           name: e2e test
           command: npm run test:e2e 
   build:
+    executor: node/default
     steps:
       - checkout
       - run:
           name: production build
           command: npm run build:prod
   deploy:
+    executor: node/default
     steps:
       - run:
           name: deploy
