@@ -1,8 +1,6 @@
 version: 2.1
 jobs:
   test:
-    docker:
-      - image: circleci/node:16
     steps:
       - run:
           name: unit test
@@ -11,16 +9,12 @@ jobs:
           name: e2e test
           command: npm run test:e2e 
   build:
-    docker:
-      - image: circleci/node:16
     steps:
       - checkout
       - run:
           name: production build
           command: npm run build:prod
   deploy:
-    docker:
-      - image: circleci/node:16
     steps:
       - run:
           name: deploy
